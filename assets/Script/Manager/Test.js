@@ -48,5 +48,9 @@ cc.Class({
         cc.director.end();
         cc.game.end();
     },
+    goToMain: function() {
+        cc.director.loadScene("MainScene");
+    },
+
     // update (dt) {},
 });

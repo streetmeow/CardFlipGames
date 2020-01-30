@@ -12,19 +12,14 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        temporary: cc.Node,
 
     },
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad() {
-
-    },
+    // onLoad () {},
 
     start() {
-        this.temporary.active = false;
-
 
     },
 

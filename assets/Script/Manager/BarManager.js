@@ -10,23 +10,26 @@
 
 cc.Class({
     extends: cc.Component,
-
     properties: {
-        temporary: cc.Node,
-
+        timeBarScore: cc.ProgressBar,
     },
+
 
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad() {
+    // onLoad () {},
 
-    },
 
     start() {
-        this.temporary.active = false;
-
 
     },
 
-    // update (dt) {},
+    update(dt) {
+        cc.log("dog");
+        this.timeBarScore.progress -= 0.017 * dt;
+        if (this.timeBarScore.progress < 0) {
+            cc.director.loadScene("FailScene");
+        }
+
+    },
 });
